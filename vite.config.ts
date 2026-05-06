@@ -5,6 +5,6 @@ export default defineConfig(({ command }) => {
   const isProduction = command === 'build'
   return {
     plugins: [react()],
-    base: isProduction ? '/gap-code/' : '/',
+    base: isProduction ? '/fullstack-template/' : '/',
   }
 })
