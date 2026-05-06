@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
+import pkg from '../package.json'
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 function HomePage() {
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8">
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">🚀 Full Stack Template</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">🚀 {pkg.name}</h1>
       <div className="h-1 w-32 bg-blue-500 mb-6 rounded"></div>
       
       <section className="mb-8">
