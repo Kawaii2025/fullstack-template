@@ -58,3 +58,35 @@ npm run dev:full
 - `nodemon.json` - Nodemon watch config
 - `tsconfig.json` - TypeScript config
 - `vite.config.ts` - Vite config
+
+## Environment Variables & Mode
+
+### Node.js (Backend)
+Use `process.env.NODE_ENV` to check environment:
+```javascript
+if (process.env.NODE_ENV === 'production') {
+  // Production-only logic
+}
+```
+
+### Vite (Frontend)
+Use these built-in variables:
+```javascript
+// Check mode
+if (import.meta.env.MODE === 'production') { /* ... */ }
+
+// Boolean flags
+if (import.meta.env.PROD) { /* Production */ }
+if (import.meta.env.DEV) { /* Development */ }
+
+// Base URL for routing
+import.meta.env.BASE_URL
+```
+
+### Environment Files
+Create these files (add to .gitignore!):
+- `.env.development` - Development settings
+- `.env.production` - Production settings
+- `.env` - Default for all environments
+
+Vite automatically loads them based on the mode.
